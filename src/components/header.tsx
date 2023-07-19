@@ -33,7 +33,6 @@ export default function Header() {
         const movieIndex = movieIds.indexOf(movieId);
         const movieName = movies[movieIndex];
         console.log(`Button for movie "${movieName}" clicked with ID ${movieId}`);
-        <Info movieId={movieId} />
     };
     useEffect(() => {
         getInfo();
@@ -43,11 +42,14 @@ export default function Header() {
             <h1 className=" text-2xl">Cinebrief</h1>
             <input className="mr-3 p-1 rounded-full w-[20rem] text-black pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
             {toggleDrop && (
-                <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 left-60">
+                <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 left-60 pt-2 pb-2">
                     {movies.map((movie: string, index: number) => (
-                        <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2">{movie}</button>
-        ))}
+                        <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3">{movie}
+                        {movieIds[index] !== 0 && <Info movieId={movieIds[index]} />}
+                        </button>
+                    ))}
                 </div>
+                
             )}
             <button className="button">Info</button>
         </div>

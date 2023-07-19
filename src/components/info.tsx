@@ -1,12 +1,15 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import movieId from './header'
+interface InfoProps {
+    movieId: number
+}
 
-export default function Info({ movieId }: { movieId: number }) {
+export default function Info({movieId}: InfoProps) {
     const [info, setInfo] = useState<string>('')
     useEffect(() => {
-        const getInfo = async (id: number) => {
+        const getInfo = async () => {
+            console.log(`Movie ID: ${movieId}`);
             try {
                 const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=87816556a329f30685772bb450222859&language=en-US`);
                 const data = await res.json()
@@ -17,7 +20,7 @@ export default function Info({ movieId }: { movieId: number }) {
             }
         }
         
-        getInfo(movieId)
+        getInfo()
     }, [movieId])
 
     console.log(`Movie ID: ${movieId}`);
