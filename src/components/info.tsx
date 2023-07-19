@@ -8,7 +8,7 @@ export default function Info({ movieId }: { movieId: number }) {
     useEffect(() => {
         const getInfo = async (id: number) => {
             try {
-                const res = await fetch('https://api.themoviedb.org/3/movie/' + id + '?api_key=87816556a329f30685772bb450222859&language=en-US')
+                const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=87816556a329f30685772bb450222859&language=en-US`);
                 const data = await res.json()
                 console.log(data.overview)
                 setInfo(data.overview)

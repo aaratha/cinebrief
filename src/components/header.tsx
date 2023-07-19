@@ -45,7 +45,7 @@ export default function Header() {
             {toggleDrop && (
                 <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 left-60">
                     {movies.map((movie: string, index: number) => (
-                        <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="button z-20">{movie}</button>
+                        <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2">{movie}</button>
         ))}
                 </div>
             )}
