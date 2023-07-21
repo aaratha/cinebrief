@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className='flex flex-col h-screen'>
       <div className=' '><Header onQuery={setId} /></div>
-      <div className='flex flex-row h-[47.5rem]'>
+      <div className='flex flex-row h-[90vh]'>
         <Info movieId={id} />
         <AI movieId={id} />
         <Similar />
