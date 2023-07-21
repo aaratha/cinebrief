@@ -33,6 +33,7 @@ export default function Info({movieId}: InfoProps) {
     }, [movieId])
 
     console.log(`Movie ID: ${movieId}`);
+    console.log(process.env.OPENAI_API_KEY)
     return (
         <div className=" w-[44vw] max-w-[44vw] m-3 ml-6 bg-primary border border-white border-opacity-25 rounded-md justify-between flex flex-col">
             <div className="flex flex-col">
