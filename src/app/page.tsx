@@ -13,7 +13,7 @@ export default function Home() {
       <div className=' '><Header onQuery={setId} /></div>
       <div className='flex flex-row h-[91vh]'>
         <Info movieId={id} />
-        <AI />
+        <AI movieId={id} />
         <Similar />
       </div>
     </div>
