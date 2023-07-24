@@ -31,6 +31,7 @@ export default function AI({movieId}: AIProps) {
         setPrompt(
             `provide background information for users interested in watching the film ${movie}. be sure to include any unique or interesting details and give a run down of how it contributes to cinematic history. Try to be academic in tone, and concise with minimal bloating.`
         );
+        
 
         // Submit the form
         const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
@@ -81,7 +82,7 @@ export default function AI({movieId}: AIProps) {
                         Context
                     </button>
                     <button onClick={handleReception} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-purple-100 hover:bg-opacity-50 transition-all">Reception</button>
-                    <button onClick={handleInsights} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-purple-100 hover:bg-opacity-50 transition-all">Insights</button>
+                    <button onClick={handleInsights} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-purple-100 hover:bg-opacity-50 transition-all rounded-tr-md">Insights</button>
                 </div>
             </div>
             <div className='h-[43rem] overflow-y-scroll'>
