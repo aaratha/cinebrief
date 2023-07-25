@@ -82,11 +82,11 @@ export default function AI({movieId}: AIProps) {
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4">AI</h1>
                 <div className="text-black flex flex-row">
-                    <button onClick={handleContext} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-slate-800 hover:bg-opacity-70 hover:text-white transition-all">
+                    <button onClick={handleContext} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">
                         Context
                     </button>
-                    <button onClick={handleReception} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-slate-800 hover:bg-opacity-70 hover:text-white transition-all">Reception</button>
-                    <button onClick={handleInsights} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-slate-800 hover:bg-opacity-70 hover:text-white transition-all">Insights</button>
+                    <button onClick={handleReception} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">Reception</button>
+                    <button onClick={handleInsights} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">Insights</button>
                 </div>
             </div>
             <div className='flex scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full'>

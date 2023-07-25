@@ -14,7 +14,7 @@ export default function Home() {
       <div className='flex flex-row h-[90vh] w-full'>
         <Info movieId={id} />
         <AI movieId={id} />
-        <Similar />
+        <Similar movieId={id} />
       </div>
       <div className='ml-6 mr-6 flex flex-row justify-between text-sm text-opacity-50 text-white'>
         <p>Movie Information provided by The Movie Database</p>

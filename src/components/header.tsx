@@ -1,18 +1,29 @@
 'use client'
 import { useEffect, useState } from "react"
 import Info from "./info"
+import Image from 'next/image'
 
 export default function Header({onQuery = (id: number) => { }}) {
     const [movies, setMovies] = useState<string[]>([])
     const [movieIds, setMovieIds] = useState<number[]>([]);
+    const [movieImgs, setMovieImgs] = useState<string[]>([]);
+    const [language, setLanguage] = useState<string>('');
+    const [date, setDate] = useState<string>('');
     const getInfo = async () => {
         try {
             const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${input}&api_key=87816556a329f30685772bb450222859&language=en-US`)
             const data = await res.json()
             const movieTitles = data.results.map((movie: any) => movie.title);
             const movieIds = data.results.map((movie: any) => movie.id);
+            const movieImgs = data.results.map((movie: any) => `https://image.tmdb.org/t/p/w500${movie.poster_path}`);
+            const language = data.results.map((movie: any) => movie.original_language);
+            const date = data.results.map((movie: any) => movie.release_date);
             setMovies(movieTitles);
             setMovieIds(movieIds);
+            setMovieImgs(movieImgs);
+            setLanguage(language[0]);
+            setDate(date[0].slice(0, 4));
+
         } catch (error) {
             console.log(error)
         }
@@ -47,7 +58,17 @@ export default function Header({onQuery = (id: number) => { }}) {
                 {toggleDrop && (
                     <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-slate-500">
                         {movies.map((movie: string, index: number) => (
-                            <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3">{movie}
+                            <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="flex flex-row z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3 bg-gray-800 hover:bg-primary transition-all">
+                                <Image
+                                    src={movieImgs[index]}
+                                    alt='no image'
+                                    width={50}
+                                    height={75}
+                                ></Image>
+                                <div className="flex flex-col m-auto">
+                                    <h1>{movie}</h1>
+                                    <p>{date} {language}</p>
+                                </div>
                             </button>
                         ))}
                     </div>
