@@ -10,6 +10,7 @@ export default function Info({movieId}: InfoProps) {
     const [info, setInfo] = useState<string>('')
     const [cast, setCast] = useState<string[]>([])
     const [castImage, setCastImage] = useState<string[]>([])
+    const [title, setTitle] = useState<string>('')
     useEffect(() => {
         const getInfo = async () => {
             console.log(`Movie ID: ${movieId}`);
@@ -18,6 +19,7 @@ export default function Info({movieId}: InfoProps) {
                 const data = await res.json()
                 console.log(data.overview)
                 setInfo(data.overview)
+                setTitle(data.title)
                 const castRes = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=87816556a329f30685772bb450222859&language=en-US`)
                 const castData = await castRes.json()
                 const castItems = castData.cast.map((cast: {name: string, profile_path: string}) => [cast.name, cast.profile_path])
@@ -35,9 +37,9 @@ export default function Info({movieId}: InfoProps) {
     console.log(`Movie ID: ${movieId}`);
     console.log(process.env.OPENAI_API_KEY)
     return (
-        <div className=" w-[44vw] max-w-[44vw] m-3 ml-6 bg-primary border border-white border-opacity-25 rounded-md justify-between flex flex-col">
+        <div className=" w-[41vw] max-w-[41vw] m-3 ml-6 bg-primary border border-white border-opacity-25 rounded-md justify-between flex flex-col">
             <div className="flex flex-col">
-                <h1 className="text-center mt-4 text-xl border border-white border-opacity-25 rounded-md p-2 max-w-full m-4 mb-0 bg-gradient-to-r from-secondary to-tertiary text-black">Movie Information</h1>
+                <h1 className="h-[2.7rem] text-center mt-4 text-xl border border-white border-opacity-25 rounded-md p-2 max-w-full m-4 bg-gradient-to-r from-secondary to-tertiary text-black">{title}</h1>
                 {/*<p>{creator}</p>
                 <p>{roles}</p>*/}
                 <p className="m-7 mt-6">{info}</p>
