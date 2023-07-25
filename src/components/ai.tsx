@@ -78,9 +78,9 @@ export default function AI({movieId}: AIProps) {
     }
 
     return (
-        <div className="w-[41vw] max-h-full max-w-[41vw] m-3 ml-0 border bg-primary border-white border-opacity-25 rounded-md">
+        <div className="w-[44vw] max-w-[44vw] m-3 ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative overflow-auto">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
-                <h1 className="text-black text-center text-xl flex mt-auto mb-auto ml-4">AI</h1>
+                <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4">AI</h1>
                 <div className="text-black flex flex-row">
                     <button onClick={handleContext} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-slate-800 hover:bg-opacity-70 hover:text-white transition-all">
                         Context
@@ -89,7 +89,7 @@ export default function AI({movieId}: AIProps) {
                     <button onClick={handleInsights} className="aibutton p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-slate-800 hover:bg-opacity-70 hover:text-white transition-all">Insights</button>
                 </div>
             </div>
-            <div className='max-h-full h-[40.5rem] overflow-y-scroll flex overflow-x-hidden'>
+            <div className='flex scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full'>
                 <div className=" w-full p-5 pt-5 flex flex-col text-white">
                     {messages.map((m) => (
                         <div key={m.id}>
@@ -98,8 +98,8 @@ export default function AI({movieId}: AIProps) {
                         </div>
                     ))}
                 </div>
-                <div className='h-14 absolute bg-gradient-to-b from-transparent to-primary bottom-[4.75rem] rounded-b-md w-[30.8rem]'></div>
             </div>
+            <div className='bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
         </div>
     );
 }

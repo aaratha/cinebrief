@@ -9,9 +9,9 @@ import { useState } from 'react'
 export default function Home() {
   const [id, setId] = useState<number>(0);
   return (
-    <div className='flex flex-col h-screen bg-black'>
+    <div className='flex flex-col h-screen bg-black w-screen'>
       <div className=' '><Header onQuery={setId} /></div>
-      <div className='flex flex-row h-[86vh]'>
+      <div className='flex flex-row h-[90vh] w-full'>
         <Info movieId={id} />
         <AI movieId={id} />
         <Similar />

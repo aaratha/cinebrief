@@ -41,11 +41,11 @@ export default function Header({onQuery = (id: number) => { }}) {
     }, [input]);
     return (
         <div className="m-6 mb-2 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
-            <h1 className=" text-2xl">Cinebrief</h1>
+            <h1 className=" text-2xl text-white">Cinebrief</h1>
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="mr-3 p-1 rounded-full w-[20rem] text-black pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (
-                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 pt-2 pb-2">
+                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-10 border-white border-opacity-25 w-[20rem] rounded-md h-40 mt-2 bg-primary overflow-scroll flex flex-col top-14 pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-slate-500">
                         {movies.map((movie: string, index: number) => (
                             <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3">{movie}
                             </button>
@@ -53,7 +53,7 @@ export default function Header({onQuery = (id: number) => { }}) {
                     </div>
                 )}
             </form>
-            <button className="border border-white border-opacity-25 bg-primary p-2 w-16 hover:bg-secondary transition-all hover:text-black rounded-md">Info</button>
+            <button className=" text-white border border-white border-opacity-25 bg-primary p-2 w-16 hover:bg-secondary transition-all hover:text-black rounded-md">Info</button>
         </div>
     );
 }

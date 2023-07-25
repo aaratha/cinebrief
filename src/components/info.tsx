@@ -37,17 +37,17 @@ export default function Info({movieId}: InfoProps) {
     console.log(`Movie ID: ${movieId}`);
     console.log(process.env.OPENAI_API_KEY)
     return (
-        <div className=" w-[41vw] max-w-[41vw] m-3 ml-6 bg-primary border border-white border-opacity-25 rounded-md justify-between flex flex-col">
+        <div className=" w-[44vw] max-w-[42vw] m-3 ml-6 bg-primary border border-white border-opacity-25 rounded-md justify-between flex flex-col">
             <div className="flex flex-col">
                 <h1 className="h-[2.7rem] text-center mt-4 text-xl border border-white border-opacity-25 rounded-md p-2 max-w-full m-4 bg-gradient-to-r from-secondary to-tertiary text-black">{title}</h1>
                 {/*<p>{creator}</p>
                 <p>{roles}</p>*/}
-                <p className="m-7 mt-6">{info}</p>
+                <p className="m-7 mt-6 text-white">{info}</p>
             </div>
             <div className="m-4 mt-0">
                 <h1 className="text-black rounded-t-md w-[6rem] text-center p-1 border-b-0 bg-secondary">Top Cast</h1>
                 <div className="p-[2px] bg-gradient-to-r from-secondary to-tertiary rounded-md rounded-tl-none">
-                    <div className="h-[11rem] rounded-md bg-black flex flex-row overflow-x-scroll overflow-y-hidden p-3">
+                    <div className="h-[11rem] scrollbar-track-primary scrollbar-thumb-slate-500 scrollbar-thin rounded-md bg-black flex flex-row overflow-x-scroll overflow-y-hidden p-3 text-white">
                         {cast.map((actor: string, index: number) => (
                             <Cast key={index} name={actor} image={castImage[index]} />
                         ))}
