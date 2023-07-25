@@ -10,6 +10,8 @@ export default function Home() {
   const [id, setId] = useState<number>(0);
   return (
     <div className='flex flex-col max-w-screen md:h-screen bg-black w-screen'>
+      <head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106001278051966"
+      crossOrigin="anonymous"></script></head>
       <div className=' '><Header onQuery={setId} /></div>
       <div className='flex flex-col md:flex-row h-[90vh] w-full overflow-scroll md:overflow-hidden overflow-x-hidden scrollbar scrollbar-track-primary scrollbar-thumb-gray-800'>
         <Info movieId={id} />
