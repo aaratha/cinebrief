@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className='flex flex-col max-w-screen md:h-screen bg-black w-screen'>
       <div className=' '><Header onQuery={setId} /></div>
-      <div className='flex flex-col md:flex-row h-[90vh] w-full overflow-scroll overflow-x-hidden scrollbar scrollbar-track-primary scrollbar-thumb-gray-800'>
+      <div className='flex flex-col md:flex-row h-[90vh] w-full overflow-scroll md:overflow-hidden overflow-x-hidden scrollbar scrollbar-track-primary scrollbar-thumb-gray-800'>
         <Info movieId={id} />
         <AI movieId={id} />
         <Similar movieId={id} />
