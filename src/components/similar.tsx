@@ -33,24 +33,24 @@ export default function Similar({movieId}: SimilarProps) {
     onQuery(movieId.valueOf());*/}
         
     return (
-        <div className="w-[12vw] bg-primary max-w-[12vw] m-3 mr-6 ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative">
+        <div className="md:w-[12vw] h-auto md:h-auto bg-primary md:max-w-[12vw] m-3 md:mr-6 md:ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-md flex m-auto p-3">Similar Movies</h1>
             </div>
-            <div className=' overflow-y-scroll scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 '>
+            <div className='overflow-y-hidden md:overflow-y-scroll scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 flex flex-row md:flex-col z-10'>
                 {titles.map((title: string, index: number) => ( 
-                    <button key={index} /* onClick={() => handleButtonClick(movieIds[index])}*/ className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mb-0 rounded-md overflow-auto'>
+                    <button key={index} /* onClick={() => handleButtonClick(movieIds[index])}*/ className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 h-48 w-24'>
                         <Image 
                             src={posters[index]}
                             alt='no image'
                             width={192}
                             height={288}
                         ></Image>
-                        <p className='m-2 text-sm'>{title}</p>
+                        <p className='m-2 text-xs md:text-sm'>{title}</p>
                     </button>
                 ))}
             </div>
-            <div className='bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
+            <div className='md:z-20 z-0 bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
         </div>
     )
 }

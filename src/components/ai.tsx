@@ -78,7 +78,7 @@ export default function AI({movieId}: AIProps) {
     }
 
     return (
-        <div className="w-[44vw] max-w-[44vw] m-3 ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative overflow-auto">
+        <div className="md:w-[44vw] md:max-w-[44vw] m-3 mb-0 md:mb-3 md:ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4">AI</h1>
                 <div className="text-black flex flex-row">
@@ -89,7 +89,7 @@ export default function AI({movieId}: AIProps) {
                     <button onClick={handleInsights} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">Insights</button>
                 </div>
             </div>
-            <div className='flex scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full'>
+            <div className='flex scrollbar-none md:scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full z-10'>
                 <div className=" w-full p-5 pt-5 flex flex-col text-white">
                     {messages.map((m) => (
                         <div key={m.id}>
@@ -99,7 +99,7 @@ export default function AI({movieId}: AIProps) {
                     ))}
                 </div>
             </div>
-            <div className='bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
+            <div className='z-0 md:z-20 bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
         </div>
     );
 }
