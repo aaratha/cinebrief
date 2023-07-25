@@ -33,7 +33,7 @@ export default function Similar({movieId}: SimilarProps) {
     onQuery(movieId.valueOf());*/}
         
     return (
-        <div className="md:w-[12vw] h-auto md:h-auto bg-primary md:max-w-[12vw] m-3 md:mr-6 md:ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative ">
+        <div className=" z-10 md:w-[12vw] h-auto md:h-auto bg-primary md:max-w-[12vw] m-3 md:mr-6 md:ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-md flex m-auto p-3">Similar Movies</h1>
             </div>
@@ -50,7 +50,7 @@ export default function Similar({movieId}: SimilarProps) {
                     </button>
                 ))}
             </div>
-            <div className='md:z-20 z-0 bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 h-16 w-full'></div>
+            <div className='md:z-20 z-0 bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 md:h-16 w-full'></div>
         </div>
     )
 }
