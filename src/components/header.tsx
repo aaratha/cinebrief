@@ -51,7 +51,7 @@ export default function Header({onQuery = (id: number) => { }}) {
         getInfo();
     }, [input]);
     return (
-        <div className="m-6 md:mb-3 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
+        <div className="m-5 ml-3 mr-3 md:m-6 md:mb-3 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
             <h1 className=" text-2xl text-white">Cinebrief</h1>
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-[40vw] md:w-[20rem] pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
