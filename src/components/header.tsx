@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import Info from "./info"
 import Image from 'next/image'
+import logo from '../app/logo.png'
 
 export default function Header({onQuery = (id: number) => { }}) {
     const [movies, setMovies] = useState<string[]>([])
@@ -52,7 +53,7 @@ export default function Header({onQuery = (id: number) => { }}) {
     }, [input]);
     return (
         <div className="m-5 ml-3 mr-3 md:m-6 md:mb-3 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
-            <h1 className=" text-2xl text-white">Cinebrief</h1>
+            <h1 className=" text-2xl text-white"><Image src={logo} alt='Cinebrief' width={130}></Image></h1>
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-[40vw] md:w-[20rem] pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (
@@ -74,7 +75,7 @@ export default function Header({onQuery = (id: number) => { }}) {
                     </div>
                 )}
             </form>
-            <button className=" text-white border border-white border-opacity-25 bg-primary p-2 w-16 hover:bg-secondary transition-all hover:text-black rounded-md">Info</button>
+            <button className=" text-white border border-white border-opacity-25 bg-primary p-[0.3rem] w-16 hover:bg-secondary transition-all hover:text-black rounded-md">Info</button>
         </div>
     );
 }

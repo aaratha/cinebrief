@@ -39,7 +39,7 @@ export default function Similar({movieId}: SimilarProps) {
             </div>
             <div className='overflow-y-hidden md:overflow-y-scroll scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 flex flex-row md:flex-col z-10'>
                 {titles.map((title: string, index: number) => ( 
-                    <button key={index} /* onClick={() => handleButtonClick(movieIds[index])}*/ className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 h-48 w-24'>
+                    <button key={index} /* onClick={() => handleButtonClick(movieIds[index])}*/ className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 w-32 md:w-auto h-auto'>
                         <Image 
                             src={posters[index]}
                             alt='no image'

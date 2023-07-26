@@ -78,15 +78,15 @@ export default function AI({movieId}: AIProps) {
     }
 
     return (
-        <div className="md:w-[44vw] md:max-w-[44vw] m-3 mb-0 md:mb-3 md:ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative">
+        <div className="md:w-[44vw] md:max-w-[44vw] m-3 mb-0 md:mb-3 md:ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4">AI</h1>
-                <div className="text-black flex flex-row">
-                    <button onClick={handleContext} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">
+                <div className="z-10 text-black flex flex-row overflow-hidden rounded-t-md">
+                    <button onClick={handleContext} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-800 hover:text-white transition-all">
                         Context
                     </button>
-                    <button onClick={handleReception} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">Reception</button>
-                    <button onClick={handleInsights} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-700 hover:text-white transition-all">Insights</button>
+                    <button onClick={handleReception} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-800 hover:text-white transition-all">Reception</button>
+                    <button onClick={handleInsights} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-800 hover:text-white transition-all">Insights</button>
                 </div>
             </div>
             <div className='flex scrollbar-none md:scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full z-10'>
