@@ -3,8 +3,10 @@ import { useEffect, useState } from "react"
 import Info from "./info"
 import Image from 'next/image'
 import logo from '../app/logo.png'
+import { useRouter } from 'next/navigation'
 
 export default function Header({onQuery = (id: number) => { }}) {
+    const router = useRouter();
     const [movies, setMovies] = useState<string[]>([])
     const [movieIds, setMovieIds] = useState<number[]>([]);
     const [movieImgs, setMovieImgs] = useState<string[]>([]);
@@ -46,14 +48,14 @@ export default function Header({onQuery = (id: number) => { }}) {
         const movieName = movies[movieIndex];
         onQuery(movieId.valueOf());
         console.log(`Button for movie "${movieName}" clicked with ID ${movieId}`);
-        
+        router.push(`/dashboard?id=${movieId}`);
     };
     useEffect(() => {
         getInfo();
     }, [input]);
     return (
         <div className="m-5 ml-3 mr-3 md:m-6 md:mb-3 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
-            <h1 className=" text-2xl text-white"><Image src={logo} alt='Cinebrief' width={130}></Image></h1>
+            <h1 className=" text-2xl text-white"><a href="/"><Image src={logo} alt='Cinebrief' width={130}></Image></a></h1>
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-[40vw] md:w-[20rem] pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (
