@@ -77,7 +77,7 @@ export default function Header({onQuery = (id: number) => { }}) {
                     </div>
                 )}
             </form>
-            <button className=" text-white border border-white border-opacity-25 bg-primary p-[0.3rem] w-16 hover:bg-secondary transition-all hover:text-black rounded-md">Info</button>
+            <button className=" text-white border border-white border-opacity-25 bg-primary p-[0.3rem] w-16 hover:bg-secondary transition-all hover:text-black rounded-md"><a href="/about">About</a></button>
         </div>
     );
 }
