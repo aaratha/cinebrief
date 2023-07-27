@@ -89,7 +89,7 @@ export default function AI({movieId}: AIProps) {
                     <button onClick={handleInsights} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-800 hover:text-white transition-all">Insights</button>
                 </div>
             </div>
-            <div className='flex scrollbar-none md:scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full z-10'>
+            <div className='flex scrollbar-none md:scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-slate-500 overflow-scroll overflow-x-hidden h-full z-10'>
                 <div className=" w-full p-5 pt-5 flex flex-col text-white">
                     {messages.map((m) => (
                         <div key={m.id}>
