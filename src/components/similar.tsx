@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 interface SimilarProps {
     movieId: number
     /*onQuery: (id: number) => void*/
 }
 
 export default function Similar({movieId}: SimilarProps) {
+    const router = useRouter();
     const [titles, setTitles] = useState<string[]>([])
     const [posters, setPosters] = useState<string[]>([])
     const [movieIds, setMovieIds] = useState<number[]>([])
@@ -27,10 +29,10 @@ export default function Similar({movieId}: SimilarProps) {
         
         getInfo()
     }, [movieId])
-    
-    {/*const handleButtonClick = (movieId: number) => {
-        const movieIndex = movieIds.indexOf(movieId);
-    onQuery(movieId.valueOf());*/}
+
+    const handleButtonClick = (movieId: number) => {
+        router.push(`/dashboard?id=${movieId}`);
+    }
         
     return (
         <div className=" z-10 md:w-[12vw] h-auto md:h-auto bg-primary md:max-w-[12vw] m-3 md:mr-6 md:ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative ">
@@ -39,7 +41,7 @@ export default function Similar({movieId}: SimilarProps) {
             </div>
             <div className='overflow-y-hidden md:overflow-y-scroll scrollbar scrollbar-track-gray-800 scrollbar-thumb-slate-500 flex flex-row md:flex-col z-10'>
                 {titles.map((title: string, index: number) => ( 
-                    <button key={index} /* onClick={() => handleButtonClick(movieIds[index])}*/ className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 w-32 md:w-auto h-auto'>
+                    <button key={index} onClick={() => handleButtonClick(movieIds[index])} className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 w-32 md:w-auto h-auto'>
                         <Image 
                             src={posters[index]}
                             alt='no image'
