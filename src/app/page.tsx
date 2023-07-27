@@ -9,7 +9,7 @@ interface LandingProps {
     movieId: number
 }
 
-export default function Landing({onQuery = (id: number) => { }}) {
+export default function Landing() {
     const router = useRouter();
     const [movies, setMovies] = useState<string[]>([])
     const [movieIds, setMovieIds] = useState<number[]>([]);
@@ -50,7 +50,6 @@ export default function Landing({onQuery = (id: number) => { }}) {
     const handleButtonClick = (movieId: number) => {
         const movieIndex = movieIds.indexOf(movieId);
         const movieName = movies[movieIndex];
-        onQuery(movieId.valueOf());
         console.log(`Button for movie "${movieName}" clicked with ID ${movieId}`);
         router.push(`/dashboard?id=${movieId}`);
     };
