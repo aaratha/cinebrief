@@ -55,7 +55,7 @@ export default function Header({onQuery = (id: number) => { }}) {
     }, [input]);
     return (
         <div className="m-5 ml-3 mr-3 md:m-6 md:mb-3 max-w-full  border-opacity-25 rounded-md border-white h-[1.4rem] flex flex-row justify-between  items-center">
-            <h1 className=" text-2xl text-white"><a href="/"><Image src={logo} alt='Cinebrief' width={130}></Image></a></h1>
+            <h1 className=" text-2xl text-white hover:scale-95 transition-all"><a href="/"><Image src={logo} alt='Cinebrief' width={150}></Image></a></h1>
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-[40vw] md:w-[20rem] pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (

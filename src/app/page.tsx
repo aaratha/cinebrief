@@ -61,7 +61,7 @@ export default function Landing() {
             <Head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106001278051966"
             crossOrigin="anonymous"></script></Head>
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
-                <div className='overflow-hidden mb-2'><Image src={logo} alt='Cinebrief' objectFit='cover' className='m-auto'></Image></div>
+                <div className='overflow-hidden m-6'><Image src={logo} alt='Cinebrief' objectFit='cover' className='m-auto'></Image></div>
                 <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-full pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (
