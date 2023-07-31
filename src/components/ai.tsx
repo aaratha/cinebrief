@@ -11,6 +11,7 @@ export default function AI({movieId}: AIProps) {
     const [movie, setMovie] = useState<string>('')
     const { messages, input, handleInputChange, handleSubmit, setMessages } = useChat({
         initialInput: prompt,
+        onFinish: () => {setPrompt('')}
     });
 
     useEffect(() => {
@@ -26,6 +27,12 @@ export default function AI({movieId}: AIProps) {
         getInfo()
     }, [movieId]);
 
+    useEffect(() => {
+        // Submit the form when the prompt state variable changes
+        const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
+        handleSubmit(event);
+    }, [prompt, handleSubmit]);
+
     function handleContext() {
         // Set the prompt state variable to the desired value
         setPrompt(
@@ -33,14 +40,14 @@ export default function AI({movieId}: AIProps) {
 
         setMessages([])
 
-        // Submit the form
-        const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
         handleInputChange({
             target: {
                 value: prompt,
             },
         } as React.ChangeEvent<HTMLTextAreaElement>);
-        handleSubmit(event); 
+        const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
+        handleSubmit(event);
+
     }
     
     function handleReception() {
@@ -52,12 +59,19 @@ export default function AI({movieId}: AIProps) {
         setMessages([])
 
         // Submit the form
-        const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
+        /*const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
         handleInputChange({
             target: {
                 value: prompt,
             },
         } as React.ChangeEvent<HTMLTextAreaElement>);
+        handleSubmit(event);*/
+        handleInputChange({
+            target: {
+                value: prompt,
+            },
+        } as React.ChangeEvent<HTMLTextAreaElement>);
+        const event = new Event('submit') as unknown as FormEvent<HTMLFormElement>;
         handleSubmit(event);
     }
     function handleInsights() {
@@ -104,3 +118,5 @@ export default function AI({movieId}: AIProps) {
         </div>
     );
 }
+
+
