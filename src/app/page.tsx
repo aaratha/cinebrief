@@ -63,7 +63,7 @@ export default function Landing() {
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
                 <div className='overflow-hidden m-6'><Image src={logo} alt='Cinebrief' objectFit='cover' className='m-auto'></Image></div>
                 <form onSubmit={(event) => event.preventDefault()}>
-                <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-full pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
+                <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-full pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange} placeholder='Enter title here...'></input>
                 {toggleDrop && (
                     <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25  rounded-md h-60 mt-4 bg-primary overflow-scroll flex flex-col  pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 md:left-auto left-0 w-[90vw] md:w-[40vw]">
                         {movies.map((movie: string, index: number) => (
