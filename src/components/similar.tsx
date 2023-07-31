@@ -39,7 +39,7 @@ export default function Similar({movieId}: SimilarProps) {
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
                 <h1 className="text-black text-center text-md flex m-auto p-3">Similar Movies</h1>
             </div>
-            <div className='overflow-y-hidden md:overflow-y-scroll scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-slate-500 flex flex-row md:flex-col z-10'>
+            <div className='overflow-y-hidden md:overflow-y-scroll scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 flex flex-row md:flex-col z-10'>
                 {titles.map((title: string, index: number) => ( 
                     <button key={index} onClick={() => handleButtonClick(movieIds[index])} className='hover:scale-95 transition-all flex-col border border-white border-opacity-25 m-4 mr-0 md:mr-4 md:mb-0 rounded-md overflow-hidden flex-shrink-0 w-32 md:w-auto h-auto'>
                         <Image 

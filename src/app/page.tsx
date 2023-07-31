@@ -65,7 +65,7 @@ export default function Landing() {
                 <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-full pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange}></input>
                 {toggleDrop && (
-                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25  rounded-md h-60 mt-2 bg-primary overflow-scroll flex flex-col  pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-slate-500 md:left-auto left-0 w-[90vw] md:w-[40vw]">
+                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25  rounded-md h-60 mt-4 bg-primary overflow-scroll flex flex-col  pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 md:left-auto left-0 w-[90vw] md:w-[40vw]">
                         {movies.map((movie: string, index: number) => (
                             <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="flex flex-row z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3 bg-gray-800 hover:bg-primary transition-all">
                                 <Image
