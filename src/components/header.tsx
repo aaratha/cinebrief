@@ -59,7 +59,7 @@ export default function Header({onQuery = (id: number) => { }}) {
             <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-[40vw] md:w-[20rem] pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange} placeholder="Enter title here..."></input>
                 {toggleDrop && (
-                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25 md:w-[20rem] rounded-md h-60 mt-1 bg-primary overflow-scroll flex flex-col top-14 pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 md:left-auto left-0 w-full">
+                    <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25 md:w-[20rem] rounded-md h-60 mt-1 bg-primary overflow-scroll flex flex-col top-14 pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 md:left-auto left-0 w-full text-white">
                         {movies.map((movie: string, index: number) => (
                             <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="flex flex-row z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3 bg-gray-800 hover:bg-primary transition-all">
                                 <Image
@@ -68,7 +68,7 @@ export default function Header({onQuery = (id: number) => { }}) {
                                     width={50}
                                     height={75}
                                 ></Image>
-                                <div className="flex flex-col m-auto">
+                                <div className="flex flex-col m-auto text-white">
                                     <h1>{movie}</h1>
                                     <p>{date} {language}</p>
                                 </div>
