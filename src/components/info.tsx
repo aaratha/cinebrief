@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react"
 import Cast from "./cast"
-import Image, { ImageProps } from 'next/image'
-import ImageWithFallback from "./fallback"
 interface InfoProps {
     movieId: number
 }
@@ -53,7 +51,7 @@ export default function Info({movieId}: InfoProps) {
                 
                 <h1 className="h-[2.7rem] text-center mt-4 text-xl border border-white border-opacity-25 rounded-md p-2 max-w-full m-4 bg-gradient-to-r from-secondary to-tertiary text-black overflow-x-scroll whitespace-nowrap scrollbar-none font-serif">{title}</h1>
                 <div className="flex flex-col md:flex-row items-center m-4">
-                    <ImageWithFallback key={poster} src={poster} fallbackSrc="/../app/placeholder.png" alt='no image' width={200} height={200} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" className=" align-top border border-white border-opacity-25 rounded-md mb-3 md:mb-0"></ImageWithFallback>
+                    <img key={poster} src={poster} alt='no image' width={200} height={200} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw" className=" align-top border border-white border-opacity-25 rounded-md mb-3 md:mb-0"></img>
                     <div className="flex flex-col ml-4 text-white">
                         <p className="text-opacity-75 text-white">{creator}</p>
                         <p className="mb-2 opacity-50 text-sm italic">{roles}</p>

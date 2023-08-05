@@ -62,7 +62,7 @@ export default function Landing() {
             crossOrigin="anonymous"></script></Head>
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
                 <div className='overflow-hidden m-4'>
-                    <Image src={logo} alt='Cinebrief' objectFit='cover' className='m-auto'></Image>
+                    <img src='../app/logo.png' alt='Cinebrief' className='m-auto'></img>
                     <p className='text-center mt-1 text-xl italic  font-serif'>- Movies in a Minute -</p>
                 </div>
                 <form onSubmit={(event) => event.preventDefault()}>
@@ -71,12 +71,12 @@ export default function Landing() {
                     <div onMouseDown={(e) => e.preventDefault()} className="absolute border z-20 border-white border-opacity-25  rounded-md h-60 mt-4 bg-primary overflow-scroll flex flex-col  pt-2 pb-2 overflow-x-hidden scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 md:left-auto left-0 w-[90vw] md:w-[40vw] text-white">
                         {movies.map((movie: string, index: number) => (
                             <button key={movieIds[index]} onClick={() => handleButtonClick(movieIds[index])} className="flex flex-row z-20 border border-white border-opacity-25 rounded-md max-w-full m-1 p-2 ml-3 mr-3 bg-gray-800 hover:bg-primary transition-all">
-                                <Image
+                                <img
                                     src={movieImgs[index]}
                                     alt='no image'
                                     width={50}
                                     height={75}
-                                ></Image>
+                                ></img>
                                 <div className="flex flex-col m-auto text-white">
                                     <h1>{movie}</h1>
                                     <p>{date} {language}</p>
