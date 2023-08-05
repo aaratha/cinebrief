@@ -19,7 +19,7 @@ export default function About() {
                 <p className=''>Created by Aseem Ratha</p>
                 <p>Contact Information:</p>
                 <p><a href='mailto: aseemratha@gmail.com'>Email: aseemratha@gmail.com</a></p>
-                <p><a href='https://www.instagram.com/aa.ratha/'>Instagram: @aaratha</a></p>
+                <p><a href='https://www.instagram.com/aa.ratha/'>Instagram: @aa.ratha</a></p>
             </div>
         </div>
     )
