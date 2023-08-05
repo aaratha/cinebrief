@@ -51,6 +51,7 @@ export default function Similar({movieId}: SimilarProps) {
                         {/*<p className='m-2 text-xs md:text-sm'>{title}</p>*/}
                     </button>
                 ))}
+                <div className='p-3'></div>
             </div>
             <div className='md:z-20 z-0 bg-gradient-to-b from-transparent to-primary rounded-b-md absolute bottom-0 md:h-16 w-full'></div>
         </div>
