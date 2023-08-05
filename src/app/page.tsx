@@ -63,7 +63,7 @@ export default function Landing() {
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
                 <div className='overflow-hidden m-4'>
                     <Image src={logo} alt='Cinebrief' objectFit='cover' className='m-auto'></Image>
-                    <p className='text-center mt-1 text-xl italic'>Movies in a Minute</p>
+                    <p className='text-center mt-1 text-xl italic  font-serif'>- Movies in a Minute -</p>
                 </div>
                 <form onSubmit={(event) => event.preventDefault()}>
                 <input className="bg-primary text-white border border-white border-opacity-25 mr-3 p-1 rounded-full w-full pl-3" onFocus={handleFocus} onBlur={handleBlur} onChange={handleInputChange} placeholder='Enter title here...'></input>
