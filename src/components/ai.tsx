@@ -99,7 +99,7 @@ export default function AI({movieId}: AIProps) {
     return (
         <div className="md:w-[44vw] md:max-w-[44vw] m-3 mb-0 md:mb-3 md:ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
-                <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4">AI</h1>
+                <h1 className="text-black text-center text-xl mt-auto mb-auto ml-4 font-serif">AI</h1>
                 <div className="z-10 text-black flex flex-row overflow-hidden rounded-tr-md">
                     <button onClick={handleContext} className=" p-3 border-l border-black border-opacity-25 h-full w-[6rem] hover:bg-gray-800 hover:text-white transition-all">
                         Context

@@ -37,7 +37,7 @@ export default function Similar({movieId}: SimilarProps) {
     return (
         <div className=" z-10 md:w-[12vw] h-auto md:h-auto bg-primary md:max-w-[12vw] m-3 md:mr-6 md:ml-0 border border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
-                <h1 className="text-black text-center text-md flex m-auto p-3">Similar Movies</h1>
+                <h1 className="text-black text-center text-md flex m-auto p-3 font-serif">Similar Movies</h1>
             </div>
             <div className='overflow-y-hidden md:overflow-y-scroll scrollbar-thin scrollbar-track-primary scrollbar-thumb-gray-500 flex flex-row md:flex-col z-10'>
                 {titles.map((title: string, index: number) => ( 
