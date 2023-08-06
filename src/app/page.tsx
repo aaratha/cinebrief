@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import logo from '../app/logo.png'
+import logo from '.logo.png'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Head from 'next/head'
@@ -62,7 +62,7 @@ export default function Landing() {
             crossOrigin="anonymous"></script></Head>
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
                 <div className='overflow-hidden m-4'>
-                    <img src='../app/logo.png' alt='Cinebrief' className='m-auto'></img>
+                    <img src='@/logo.png' alt='Cinebrief' className='m-auto'></img>
                     <p className='text-center mt-1 text-xl italic  font-serif'>- Movies in a Minute -</p>
                 </div>
                 <form onSubmit={(event) => event.preventDefault()}>
