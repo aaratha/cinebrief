@@ -95,7 +95,7 @@ export default function AI({movieId}: AIProps) {
         } as React.ChangeEvent<HTMLTextAreaElement>);
         handleSubmit(event);
     }
-
+    /*test*/
     return (
         <div className="md:w-[44vw] md:max-w-[44vw] m-3 mb-0 md:mb-3 md:ml-0 border bg-primary border-white border-opacity-25 rounded-md flex flex-col relative ">
             <div className=" bg-gradient-to-r from-secondary to-tertiary flex flex-row  justify-between rounded-t-md">
