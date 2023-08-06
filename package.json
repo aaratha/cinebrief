@@ -2,11 +2,13 @@
   "name": "cinebrief",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aaratha.github.io/cinebrief",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && npx gh-pages -d out"
   },
   "dependencies": {
     "@types/node": "20.4.2",
@@ -16,6 +18,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "ghpages": "^0.0.10",
     "next": "^13.4.11",
     "openai-edge": "^1.2.1",
     "os": "^0.1.2",

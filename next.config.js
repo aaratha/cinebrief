@@ -1,8 +1,4 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        domains: ['image.tmdb.org'],
-    },
+module.exports = {
+    images: { unoptimized: true },
+    output: 'export'
 }
-
-module.exports = nextConfig
