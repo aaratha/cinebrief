@@ -56,13 +56,14 @@ export default function Landing() {
     useEffect(() => {
         getInfo();
     }, [input]);
+    console.log(process.env.OPEN_API_KEY)
     return(
         <div className='h-screen w-screen flex'>
             <Head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106001278051966"
             crossOrigin="anonymous"></script></Head>
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
                 <div className='overflow-hidden m-4'>
-                    <img src='@/logo.png' alt='Cinebrief' className='m-auto'></img>
+                    <Image src={require('@/logo.png')} alt='Cinebrief' width={500} height={100} className='m-auto'></Image>
                     <p className='text-center mt-1 text-xl italic  font-serif'>- Movies in a Minute -</p>
                 </div>
                 <form onSubmit={(event) => event.preventDefault()}>

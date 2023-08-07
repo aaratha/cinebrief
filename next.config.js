@@ -1,4 +1,8 @@
 module.exports = {
-    images: { unoptimized: true },
-    output: 'export'
+    output: 'export',
+    images: {
+        unoptimized: true, 
+        loader: 'imgix',
+        path: '/',
+    }
 }
