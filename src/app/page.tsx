@@ -56,7 +56,6 @@ export default function Landing() {
     useEffect(() => {
         getInfo();
     }, [input]);
-    console.log(process.env.OPENAI_API_KEY)
     return(
         <div className='h-screen w-screen flex'>
             <Head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106001278051966"

@@ -15,7 +15,6 @@ export default function Home() {
   useEffect(() => {
     setId(parseInt(searchParams.get('id') || '0'));
   }, [searchParams]);
-
   return (
     <div className='flex flex-col max-w-screen md:h-screen bg-black w-screen'>
       <Head>
