@@ -16,7 +16,8 @@ export default function Home() {
     setId(parseInt(searchParams.get('id') || '0'));
   }, [searchParams]);
 
-
+  console.log('Hello, world!');
+  console.log(`the key is`, process.env.NEXT_PUBLIC_OPENAI_API_KEY);
   return (
     <div className='flex flex-col max-w-screen md:h-screen bg-black w-screen'>
       <Head>
