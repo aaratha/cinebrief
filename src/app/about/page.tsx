@@ -12,7 +12,7 @@ export default function About() {
                 crossOrigin='anonymous'
             ></script></Head>
             <div className='flex flex-row items-center justify-between m-10 mt-4'>
-                <a href='/'><Image src={logo} alt='Cinebrief' width={200} height={200}></Image></a>
+                <a href='/'><Image src={require('@/logo.png')} alt='Cinebrief' width={150} height={100} className='m-auto'></Image></a>
                 <h1 className='text-2xl'>About</h1>
             </div>
             <div className='flex flex-col mx-auto h-full justify-between text-center text-white h-30 mb-80 mt-28'>
