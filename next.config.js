@@ -1,5 +1,4 @@
 module.exports = {
-    exportTrailingSlash: true,
     images: {
         unoptimized: true, 
         loader: 'imgix',
