@@ -60,7 +60,7 @@ export default function Info({movieId}: InfoProps) {
                 </div>
             </div>
             <div className="m-4 mt-0">
-                <h1 className="text-black rounded-t-md w-[6rem] text-center p-1 border-b-0 bg-secondary">Top Cast</h1>
+                <h1 className="text-black font-serif rounded-t-md w-[6rem] text-center p-1 border-b-0 bg-secondary">Top Cast</h1>
                 <div className="p-[2px] bg-gradient-to-r from-secondary to-tertiary rounded-md rounded-tl-none">
                     <div className="h-[11rem] scrollbar-track-gray-800 scrollbar-thumb-gray-500 scrollbar-thin rounded-md bg-black flex flex-row overflow-x-scroll overflow-y-hidden p-3 text-white">
                         {cast.map((actor: string, index: number) => (

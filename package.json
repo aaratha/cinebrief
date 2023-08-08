@@ -21,6 +21,7 @@
     "eslint-config-next": "13.4.10",
     "ghpages": "^0.0.10",
     "next": "^13.4.11",
+    "openai": "^3.3.0",
     "openai-edge": "^1.2.1",
     "os": "^0.1.2",
     "path": "^0.12.7",
@@ -30,6 +31,7 @@
     "react-dom": "^18.2.0",
     "tailwind-scrollbar": "^3.0.4",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "usechat": "^0.3.25"
   }
 }
