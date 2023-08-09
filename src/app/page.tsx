@@ -57,7 +57,7 @@ export default function Landing() {
         getInfo();
     }, [input]);
     return(
-        <div className='h-screen w-screen flex'>
+        <div className='h-screen w-screen flex bg-black'>
             <Head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106001278051966"
             crossOrigin="anonymous"></script></Head>
             <div className='flex flex-col w-[90vw] md:w-[40vw] m-auto mt-28 align-middle justify-center mt-30 relative'>
